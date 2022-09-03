@@ -40,3 +40,36 @@ function getUserChoice() {
     } while (!getIt);
     return userChoice;
 }
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === 'rock') {
+        switch (computerSelection) {
+            case 'rock':
+                return 'tie';
+            case 'paper':
+                return 'computer';
+            case 'scissors':
+                return 'player';
+        }
+    }
+    if (playerSelection === 'paper') {
+        switch (computerSelection) {
+            case 'rock':
+                return 'player';
+            case 'paper':
+                return 'tie';
+            case 'scissors':
+                return 'computer';
+        }
+    }
+    if (playerSelection === 'scissors') {
+        switch (computerSelection) {
+            case 'rock':
+                return 'computer';
+            case 'paper':
+                return 'player';
+            case 'scissors':
+                return 'tie';
+        }
+    }
+}
