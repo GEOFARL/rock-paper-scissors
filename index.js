@@ -20,3 +20,12 @@
     4.3 Compare two counters using if else statements to find out who is the winner.
     4.4 Print out the name of the winner.
 */
+
+function getComputerChoice() {
+    let randomNumber = Math.floor(Math.random() * 3) + 1;
+    let computerChoice;
+    if (randomNumber === 1) computerChoice = 'rock';
+    if (randomNumber === 2) computerChoice = 'paper';
+    if (randomNumber === 3) computerChoice = 'scissors';
+    return computerChoice;
+}
