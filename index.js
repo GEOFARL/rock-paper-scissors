@@ -29,3 +29,14 @@ function getComputerChoice() {
     if (randomNumber === 3) computerChoice = 'scissors';
     return computerChoice;
 }
+
+function getUserChoice() {
+    let getIt = false;
+    let userChoice;
+    do {
+        userChoice = window.prompt("What's you choice?").toLowerCase();
+        if (!userChoice.localeCompare('rock') || !userChoice.localeCompare('paper') || !userChoice.localeCompare('scissors')) getIt = true;
+        else window.alert("You should enter 'rock', 'paper' or 'scissors'!");
+    } while (!getIt);
+    return userChoice;
+}
